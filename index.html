@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografía Comercial, Bodas y Retrato en Bucaramanga y Santander | El Studio</title>
+    <meta name="description"
+        content="Estudio fotográfico con sede creativa en Piedecuesta. Especialistas en cobertura documental de eventos, retrato editorial, fotografía infantil y producción comercial para marcas en todo Santander.">
+    <link rel="preload" as="image" href="assets/brand/foto camara .jpg" fetchpriority="high">
+    <!-- Tailwind CSS para el diseño rápido y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes de Google: Inter y Playfair Display para contraste elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Iconos Phosphor (más limpios que FontAwesome) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#F9FAFB', // Gris muy claro (casi blanco)
+                            100: '#F3F4F6', // Gris claro neutral para secciones
+                            200: '#E5E7EB', // Gris para bordes suaves
+                            500: '#6B7280', // Gris medio para textos secundarios
+                            800: '#1F2937', // Gris grafito para fondos oscuros (en lugar de negro puro)
+                            900: '#111827', // Gris carbón muy oscuro para textos principales
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Agrego Swiper CSS para el carrusel 3D -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-brand-50 text-brand-900 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navegación Fija -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#">
+                        <img src="assets/img/el_studio_head.png" alt="El Studio Logo"
+                            class="h-12 w-auto drop-shadow-sm hover:scale-105 transition-transform">
+                    </a>
+                </div>
+
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#historia"
+                        class="text-sm font-medium text-brand-500 hover:text-[#0280b8] focus:text-[#0280b8] transition-colors">La
+                        Historia</a>
+                    <a href="#proceso"
+                        class="text-sm font-medium text-brand-500 hover:text-[#0280b8] focus:text-[#0280b8] transition-colors">El
+                        Proceso</a>
+                    <a href="#portafolio"
+                        class="text-sm font-medium text-brand-500 hover:text-[#0280b8] focus:text-[#0280b8] transition-colors">Portafolio</a>
+                    <a href="#faq"
+                        class="text-sm font-medium text-brand-500 hover:text-[#0280b8] focus:text-[#0280b8] transition-colors">FAQ</a>
+
+                    <!-- Aquí mantienes tu botón con el color que elegiste en el paso anterior -->
+                    <a href="#contacto"
+                        class="bg-[#0280b8] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[#026a99] transition-colors shadow-sm">Reserva
+                        una Sesión</a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-900 focus:outline-none p-2">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-brand-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#historia"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-brand-900 hover:bg-brand-50 rounded-md">La
+                    Historia</a>
+                <a href="#proceso"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-brand-900 hover:bg-brand-50 rounded-md">El
+                    Proceso</a>
+                <a href="#portafolio"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-brand-900 hover:bg-brand-50 rounded-md">Portafolio</a>
+                <a href="#faq"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-brand-900 hover:bg-brand-50 rounded-md">FAQ</a>
+                <a href="#contacto"
+                    class="mobile-link block px-3 py-3 mt-4 text-base font-medium bg-[#B05C50] text-white rounded-md mx-2 hover:bg-[#0280b8] transition-colors">Reserva
+                    una Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Impacto Visual inspirado en Shoott -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Imagen de fondo de alta calidad (Placeholder) -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/brand/foto camara .jpg" alt="Fotografía Hero"
+                class="w-full h-full object-cover object-center filter brightness-75">
+        </div>
+        <!-- Capa de superposición para contraste del texto -->
+        <div class="absolute inset-0 bg-brand-900/40 z-10"></div>
+
+        <!-- Contenido Hero -->
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-16">
+            <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight fade-in-section is-visible">
+                Capturamos la <span class="italic font-light">esencia</span> de tus mejores momentos.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 font-light max-w-2xl mx-auto fade-in-section is-visible"
+                style="transition-delay: 200ms;">
+                Un enfoque creativo para capturar tu mejor versión. Sesiones guiadas, auténticas y llenas de estilo.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 fade-in-section is-visible"
+                style="transition-delay: 400ms;">
+                <a href="#portafolio"
+                    class="bg-white text-brand-900 px-8 py-4 rounded-full font-medium hover:bg-brand-50 transition-colors w-full sm:w-auto text-center shadow-lg">Ver
+                    Galería</a>
+                <a href="#contacto"
+                    class="bg-brand-900/30 backdrop-blur-md border border-white/50 text-white px-8 py-4 rounded-full font-medium hover:bg-brand-900/50 transition-colors w-full sm:w-auto text-center">Agendar
+                    Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección: La Historia -->
+    <section id="historia" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-section">
+                    <h4 class="text-sm font-semibold tracking-widest text-[#0280b8] uppercase mb-3">La Historia</h4>
+                    <h2 class="text-4xl font-serif mb-6 text-brand-900">Cada imagen, <span
+                            class="italic text-brand-500">comienza con una idea.</span></h2>
+                    <p class="text-brand-500 mb-6 leading-relaxed text-lg font-light">
+                        Con sede creativa en Piedecuesta, desplegamos nuestra producción fotográfica en todo el Área
+                        Metropolitana de Bucaramanga y Santander. Creemos que una imagen de alto impacto comienza mucho
+                        antes del primer disparo: inicia entendiendo la intención de tu proyecto y diseñando la
+                        iluminación, la dirección de arte y el escenario perfecto.
+                    </p>
+                    <p class="text-brand-500 mb-8 leading-relaxed text-lg font-light">
+                        Nuestra versatilidad nos permite cubrir múltiples narrativas visuales. Desde la documentación
+                        emocional de bodas y fotografía infantil (donde te guiamos paso a paso para que no tengas que
+                        saber posar), hasta la ejecución técnica de campañas comerciales y editoriales para marcas.
+                        Llevamos nuestro equipo técnico a la locación que tu historia exija.
+                    </p>
+
+                    <div class="flex items-center gap-6">
+                        <div class="text-center">
+                            <span class="block text-3xl font-serif font-bold text-brand-900">10+</span>
+                            <span class="text-xs text-brand-500 uppercase tracking-wide">Años de Exp.</span>
+                        </div>
+                        <div class="w-px h-12 bg-brand-200"></div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-serif font-bold text-brand-900">500+</span>
+                            <span class="text-xs text-brand-500 uppercase tracking-wide">Sesiones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: El Proceso (Actualizado para Flaticon) -->
+    <section id="proceso" class="py-24 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h4 class="text-sm font-semibold tracking-widest text-[#0280b8] uppercase mb-3 fade-in-section">Cómo
+                funciona</h4>
+            <h2 class="text-4xl font-serif mb-16 text-brand-900 fade-in-section">Tu sesión en <span
+                    class="italic text-brand-500">3 pasos simples</span></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Paso 1 -->
+                <div class="fade-in-section relative group">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-brand-100 group-hover:shadow-md transition-shadow group-hover:border-brand-200">
+                        <!-- AQUÍ REEMPLAZAS LA RUTA POR TU ICONO DE FLATICON -->
+                        <img src="assets/img/calendar.png" alt="Reserva tu sesión"
+                            class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="absolute top-10 left-1/2 w-full h-px bg-brand-200 hidden md:block -z-10"></div>
+                    <h3 class="text-xl font-semibold mb-3 text-brand-900">1. Reserva</h3>
+                    <p class="text-brand-500 font-light">Elige tu fecha, ubicación y tipo de sesión en nuestro chat de
+                        WhatsApp. Rápido y sin complicaciones.</p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="fade-in-section relative group" style="transition-delay: 100ms;">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-brand-100 group-hover:shadow-md transition-shadow group-hover:border-brand-200">
+                        <!-- AQUÍ REEMPLAZAS LA RUTA POR TU ICONO DE FLATICON -->
+                        <img src="assets/img/photographer.png" alt="Día de la sesión"
+                            class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="absolute top-10 left-1/2 w-full h-px bg-brand-200 hidden md:block -z-10"></div>
+                    <h3 class="text-xl font-semibold mb-3 text-brand-900">2. La Sesión</h3>
+                    <p class="text-brand-500 font-light">Nos encontramos en la locación o en nuestro estudio. Te
+                        guiaremos paso a paso para que te sientas natural y relajado.</p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="fade-in-section group" style="transition-delay: 200ms;">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-brand-100 group-hover:shadow-md transition-shadow group-hover:border-brand-200">
+                        <!--  RUTA  ICONO -->
+                        <img src="assets/img/photo.png" alt="Entrega de fotos"
+                            class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-brand-900">3. Entrega</h3>
+                    <p class="text-brand-500 font-light">Recibe una galería digital privada en alta resolución en menos
+                        de 15 días hábiles. Lista para descargar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Portafolio (Carrusel 3D Invertido Cuadrado) -->
+    <section id="portafolio" class="py-24 bg-brand-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-section">
+                <h4 class="text-sm font-semibold tracking-widest text-[#0280b8] uppercase mb-3">Nuestro Trabajo</h4>
+                <h2 class="text-4xl font-serif text-brand-900">Portafolio <span
+                        class="italic text-brand-500">Seleccionado</span></h2>
+                <p class="text-brand-500 mt-4 font-light">Desliza para explorar y toca una imagen para ampliarla.</p>
+            </div>
+
+            <!-- Contenedor del Carrusel 3D -->
+            <div class="swiper skiperSwiper w-full py-16 px-4 fade-in-section" style="perspective: 1200px;">
+                <div class="swiper-wrapper">
+
+                    <!-- 1 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/rosas.jpg" alt="Retrato Artístico" class="w-full h-full object-cover">
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_0931B&N.jpg" alt="Eventos" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_babyB&N.jpg" alt="Estudio Bebés" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 4 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_8831.jpg" alt="Maternidad" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 5 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2331.JPEG" alt="Productos Coctelería" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 6 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2068.jpg" alt="Bebés Mes a Mes" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 7 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_1118B&N.jpg" alt="Familia B&N" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 8 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_1000-2.jpg" alt="Mes a Mes" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 9 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_7867.jpg" alt="Retrato Editorial" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 10 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_1137.jpg" alt="Maternidad Liz" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 11 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_1212p.jpg" alt="Sesion ALanna" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 12 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_5361.jpg" alt="In The Dark" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 13 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_9184.jpg" alt="Halloween" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 14 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_9173.jpg" alt="Halloween" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 15 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_1800.jpg" alt="Boda Andrea & Sebastian" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 16 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_92230.jpg" alt="Mes a Mes Emma 5Mes" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 17 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2526-2.jpg" alt="Mis 24" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 18 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2080.jpg" alt="Sesion Hermanas" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 19 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2732.jpg" alt="Butterfly" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 20 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/Prueba.jpg" alt="Doble Exposición" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 21 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/Karenn&Javier0961.jpg" alt="Boda Karenn & Javier" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 22 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2402.jpg" alt="Mes a Mes Benjamin" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 23 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_6514B&N.jpg" alt="Retrato Materno" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 24 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_8577.jpg" alt="15 Años Maria Jose" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 25 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_1078.jpg" alt="Maternidad Liz" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 26 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/_MG_1982.jpg" alt="15 Años" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 27 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2272.jpg" alt="Coctelería" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 28 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2760.jpg" alt="Sesion Retrato" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 29 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/IMG_2003-3.JPEG" alt="Coctel Doble Exposición" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- 30 -->
+                    <div
+                        class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
+                        <img src="assets/brand/_MG_2057.jpg" alt="Sesion Maternidad" loading="lazy"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                </div>
+                <!-- Puntos de paginación -->
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/el.studiofotografia/"
+                    class="inline-flex items-center gap-2 text-brand-500 font-medium hover:text-brand-900 transition-colors">
+                    Ver más en Instagram <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: FAQ (Preguntas Frecuentes) -->
+    <section id="faq" class="py-24 bg-brand-50 border-y border-brand-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+
+                <h2 class="text-4xl font-serif text-brand-900">Preguntas <span
+                        class="italic text-[#0280b8]">Frecuentes</span>
+            </div>
+
+            <div class="space-y-4 fade-in-section">
+                <!-- FAQ Item 1 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-brand-100 px-6 overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-center py-5">
+                        <h5 class="text-lg font-medium text-brand-900"> ¿Donde se realizan las sesiones?</h5>
+                        <i class="ph ph-caret-down text-xl text-brand-500 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer border-t border-transparent">
+                        <p class="text-brand-500 font-light">Contamos con sesiones en nuestro estudio y también podemos
+                            realizar sesiones en el exterior, podemos ayudarte a elegir el espacio que mejor se adapte
+                            al tipo de fotografia que buscas</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-brand-100 px-6 overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-center py-5">
+                        <h5 class="text-lg font-medium text-brand-900">¿Cuanto tiempo dura una sesión?</h5>
+                        <i class="ph ph-caret-down text-xl text-brand-500 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer border-t border-transparent">
+                        <p class="text-brand-500 font-light">Una sesion puede durar entre 30 a 45 minutos dependiendo
+                            del tipo de sesión que elijas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-brand-100 px-6 overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-center py-5">
+                        <h5 class="text-lg font-medium text-brand-900">¿Cuantas personas pueden participar en una
+                            sesión?</h5>
+                        <i class="ph ph-caret-down text-xl text-brand-500 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer border-t border-transparent">
+                        <p class="text-brand-500 font-light">Depende del tipo de sesión que elijas, algunas sesiones
+                            pueden ser individuales y otras pueden ser grupales. Cuentanos tu idea y te ayudaremos a
+                            elegir la mejor opcion para ti.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-brand-100 px-6 overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-center py-5">
+                        <h5 class="text-lg font-medium text-brand-900">¿La fotografias se entregan digitales o impresas?
+                        </h5>
+                        <i class="ph ph-caret-down text-xl text-brand-500 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer border-t border-transparent">
+                        <p class="text-brand-500 font-light">Nuestras sesiones incluyen material digital y fisico,
+                            dependiendo del paquete que elijas te explicaremos las opciones disponibles al momento de
+                            reservar.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-brand-100 px-6 overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-center py-5">
+                        <h5 class="text-lg font-medium text-brand-900">¿Ustedes se encargan de la decoración y el
+                            montaje?</h5>
+                        <i class="ph ph-caret-down text-xl text-brand-500 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer border-t border-transparent">
+                        <p class="text-brand-500 font-light">Si la sesión es en nuestro estudio, nos encargamos de
+                            diseñar y producir los elementos necesarios para el spot de fotografia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Contacto Directo (WhatsApp Funnel) -->
+    <section id="contacto" class="py-24 bg-[#FAF8F5]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col lg:flex-row">
+
+                <!-- Columna Izquierda: Visual y Copy -->
+                <div class="lg:w-1/2 p-10 md:p-16 flex flex-col justify-center relative overflow-hidden">
+                    <!-- Elemento decorativo sutil -->
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-brand-50 rounded-full opacity-50 blur-3xl -z-10 translate-x-1/2 -translate-y-1/2">
+                    </div>
+
+                    <h2 class="text-4xl md:text-5xl font-serif text-brand-900 mb-4 leading-tight">
+                        Tu idea. <br><span class="italic text-[#0280b8]">Nuestra Camara</span>
+                    </h2>
+                    <p class="text-brand-500 mb-10 font-light text-lg max-w-md">
+                        Cuéntanos que tienes en mente y dejanos ayudarte a convertir tu idea en fotografías que
+                        representen lo que buscas.
+                    </p>
+
+                    <!-- Puntos de valor (Inspirados en tu referencia) -->
+                    <div class="space-y-6 mb-8 lg:mb-0">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#FAF8F5] flex items-center justify-center border border-gray-100">
+                                <i class="ph ph-camera text-xl text-brand-800"></i>
+                            </div>
+                            <p class="text-brand-900 font-medium text-sm md:text-base">Sesiones personalizadas a tu
+                                estilo.</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#FAF8F5] flex items-center justify-center border border-gray-100">
+                                <i class="ph ph-sparkle text-xl text-brand-800"></i>
+                            </div>
+                            <p class="text-brand-900 font-medium text-sm md:text-base">Cuidamos cada detalle para
+                                resultados únicos.</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#FAF8F5] flex items-center justify-center border border-gray-100">
+                                <i class="ph ph-heart text-xl text-brand-800"></i>
+                            </div>
+                            <p class="text-brand-900 font-medium text-sm md:text-base">Te acompañamos en todo el
+                                proceso.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta de WhatsApp -->
+                <div
+                    class="lg:w-1/2 bg-brand-50 p-10 md:p-16 flex flex-col justify-center items-center text-center border-l border-gray-100">
+
+                    <!-- Simulación de foto / Cámara (Puedes cambiar este src por una foto tuya de cámaras o polaroids) -->
+                    <img src="assets/brand/perfil circular.jpg" alt="Cámara fotográfica"
+                        class="w-48 h-48 object-cover rounded-full border-4 border-white shadow-lg mb-8">
+
+                    <h3 class="text-2xl font-serif text-brand-900 mb-2">¿Tienes una idea, fecha o simplemente quieres
+                        conocer nuestras opciones? </h3>
+                    <p class="text-brand-500 mb-8 font-light text-sm md:text-base">Escríbenos por WhatsApp y
+                        conversémos.</p>
+
+                    <!-- BOTÓN DE WHATSAPP -->
+                    <!-- Reemplaza el número 573000000000 con tu número real -->
+                    <a href="https://wa.me/573166899521?text=Hola%20El%20Studio!%20Vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20cotizar%20una%20sesi%C3%B3n."
+                        target="_blank" rel="noopener noreferrer"
+                        class="group relative inline-flex items-center justify-center gap-3 w-full max-w-sm bg-[#128C7E] hover:bg-[#25D366] text-white font-medium py-4 px-8 rounded-2xl transition-all duration-300 shadow-[0_4px_14px_0_rgba(18,140,126,0.39)] hover:shadow-[0_6px_20px_rgba(18,140,126,0.23)] hover:-translate-y-1">
+                        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+                        <span class="text-lg">Hablar por WhatsApp</span>
+
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-brand-200 py-12 border-t border-brand-800">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center">
+                <a href="#">
+                    <!-- Filtro para volver blanco el logo -->
+                    <img src="assets/img/el_studio_head.png" alt="El Studio Logo"
+                        class="h-10 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity">
+                </a>
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://www.instagram.com/el.studiofotografia/" class="hover:text-white transition-colors"><i
+                        class="ph ph-instagram-logo text-2xl"></i></a>
+                <a href="https://www.tiktok.com/@el.estudiofotografia?_r=1&_t=ZS-99BiZVNot1s"
+                    class="hover:text-white transition-colors"><i class="ph ph-tiktok-logo text-2xl"></i></a>
+                <a href="https://www.behance.net/edwardcamacho10" class="hover:text-white transition-colors"><i
+                        class="ph ph-behance-logo text-2xl"></i></a>
+            </div>
+            <div class="text-sm opacity-70">
+                &copy; 2026 El Studio. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox (Visor de fotos a pantalla completa) -->
+    <div id="lightbox"
+        class="fixed inset-0 z-50 bg-brand-900/95 backdrop-blur-sm hidden items-center justify-center opacity-0 transition-opacity duration-300">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-brand-200 focus:outline-none">
+            <i class="ph ph-x text-4xl"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Vista previa"
+            class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl">
+    </div>
+
+    <!--  LLAMAMOS los SCRIPT EXTERNOS (La línea mágica) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
