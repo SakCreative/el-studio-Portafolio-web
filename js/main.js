@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // --- 4 y 5. LÓGICA DEL CARRUSEL 3D Y LIGHTBOX INTEGRADO ---
+    // --- 4 y 5. LÓGICA DEL CARRUSEL 3D (Fluido y Rápido) ---
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.getElementById('close-lightbox');
@@ -74,12 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
         centeredSlides: true,
         slidesPerView: 'auto',
         loop: true,
-        speed: 500, // Reducido para que responda más rápido al scroll continuo
-        mousewheel: {
-            forceToAxis: false, // Permite el scroll vertical
-            sensitivity: 2,     // Aumenta la velocidad de respuesta de la rueda del ratón
-            releaseOnEdges: true // Evita que la página se quede atascada al llegar al inicio o fin del carrusel
+        speed: 350, // Transición ultra rápida para que no se sienta trabado
+        freeMode: {
+            enabled: false,
         },
+        // Eliminamos el mousewheel forzado para que el usuario navegue arrastrando con total libertad y fluidez
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -87,21 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
         creativeEffect: {
             limitProgress: 3, 
             prev: {
-                // Rotación hacia adentro de 50 grados (Estilo exacto de tu imagen de referencia)
-                translate: ['-75%', 0, -400],
-                rotate: [0, 50, 0], 
-                scale: 1,
-                opacity: 0.9
+                translate: ['-70%', 0, -300],
+                rotate: [0, 40, 0], 
+                scale: 0.9,
+                opacity: 0.8
             },
             next: {
-                // Rotación hacia adentro de -50 grados
-                translate: ['75%', 0, -400],
-                rotate: [0, -50, 0], 
-                scale: 1,
-                opacity: 0.9
+                translate: ['70%', 0, -300],
+                rotate: [0, -40, 0], 
+                scale: 0.9,
+                opacity: 0.8
             }
         },
-        // Integración nativa del Lightbox para abrir la foto al hacer clic
+        // Apertura del Lightbox al hacer clic
         on: {
             click: function (swiper) {
                 const clickedEl = swiper.clickedSlide;
@@ -117,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Lógica para cerrar el lightbox (Al tocar la X o hacer clic fuera de la foto)
+    // Lógica para cerrar el lightbox
     const closeLightbox = () => {
         if(lightbox) {
             lightbox.classList.remove('show-lightbox');

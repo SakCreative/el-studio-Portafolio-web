@@ -8,6 +8,16 @@
     <meta name="description"
         content="Estudio fotográfico con sede creativa en Piedecuesta. Especialistas en cobertura documental de eventos, retrato editorial, fotografía infantil y producción comercial para marcas en todo Santander.">
     <link rel="preload" as="image" href="assets/brand/foto camara .jpg" fetchpriority="high">
+    <!-- Open Graph (Previsualización en WhatsApp, Facebook, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://TU-FUTURO-DOMINIO.netlify.app/">
+    <meta property="og:title" content="El Studio | Fotografía Profesional en Santander">
+    <meta property="og:description"
+        content="Especialistas en eventos, retrato editorial, fotografía infantil y producción comercial.">
+    <!-- Asegúrate de poner aquí la ruta de una de tus mejores fotos (preferiblemente horizontal) -->
+    <meta property="og:image" content="assets/brand/foto camara .jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/brand/tu-logo-cuadrado.png">
     <!-- Tailwind CSS para el diseño rápido y responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fuentes de Google: Inter y Playfair Display para contraste elegante -->
@@ -143,40 +153,73 @@
         </div>
     </header>
 
-    <!-- Sección: La Historia -->
-    <section id="historia" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="fade-in-section">
-                    <h4 class="text-sm font-semibold tracking-widest text-[#0280b8] uppercase mb-3">La Historia</h4>
-                    <h2 class="text-4xl font-serif mb-6 text-brand-900">Cada imagen, <span
-                            class="italic text-brand-500">comienza con una idea.</span></h2>
-                    <p class="text-brand-500 mb-6 leading-relaxed text-lg font-light">
-                        Con sede creativa en Piedecuesta, desplegamos nuestra producción fotográfica en todo el Área
-                        Metropolitana de Bucaramanga y Santander. Creemos que una imagen de alto impacto comienza mucho
-                        antes del primer disparo: inicia entendiendo la intención de tu proyecto y diseñando la
-                        iluminación, la dirección de arte y el escenario perfecto.
-                    </p>
-                    <p class="text-brand-500 mb-8 leading-relaxed text-lg font-light">
-                        Nuestra versatilidad nos permite cubrir múltiples narrativas visuales. Desde la documentación
-                        emocional de bodas y fotografía infantil (donde te guiamos paso a paso para que no tengas que
-                        saber posar), hasta la ejecución técnica de campañas comerciales y editoriales para marcas.
-                        Llevamos nuestro equipo técnico a la locación que tu historia exija.
-                    </p>
+    <!-- Sección: La Historia (UI/UX Alto Nivel - Limpio) -->
+    <section id="historia" class="py-24 bg-white relative">
 
-                    <div class="flex items-center gap-6">
-                        <div class="text-center">
-                            <span class="block text-3xl font-serif font-bold text-brand-900">10+</span>
-                            <span class="text-xs text-brand-500 uppercase tracking-wide">Años de Exp.</span>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div
+                class="border-t border-brand-200 pt-16 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+
+                <!-- Columna Izquierda: Título y Ancla Visual Limpia (5 columnas) -->
+                <div class="lg:col-span-5 flex flex-col h-full">
+
+                    <div>
+                        <span
+                            class="text-xs font-semibold tracking-[0.25em] text-[#0280b8] uppercase mb-4 block">NUESTRA
+                            FILOSOFÍA</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif text-brand-900 leading-tight">
+                            Cada imagen, comienza con una <span class="italic text-[#0280b8] font-normal">idea.</span>
+                        </h2>
+
+                        <div class="w-16 h-[2px] bg-brand-900/20 mt-8 mb-12"></div>
+                    </div>
+
+                    <!-- Componente UI/UX: Imagen limpia sin elementos que la tapen -->
+                    <div
+                        class="mt-auto relative w-full h-64 sm:h-80 rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] group">
+
+                        <!-- Fotografía de alta calidad (100% visible) -->
+                        <img src="assets/img/pexels-crisher-6891485.jpg" alt="Equipos de producción audiovisual"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+
+                    </div>
+
+                </div>
+
+                <!-- Columna Derecha: Narrativa y Métricas (7 columnas) -->
+                <div class="lg:col-span-7 flex flex-col justify-between h-full lg:pl-6">
+                    <div>
+                        <p class="text-brand-600 mb-6 leading-relaxed text-lg font-light">
+                            Con sede creativa en Piedecuesta, desplegamos nuestra producción fotográfica en todo el Área
+                            Metropolitana de Bucaramanga y Santander. Entendemos cada proyecto desde su raíz: diseñando
+                            la iluminación, la dirección de arte y el concepto visual antes de capturar el primer
+                            instante.
+                        </p>
+                        <p class="text-brand-600 mb-10 leading-relaxed text-lg font-light">
+                            Desde coberturas documentales de bodas y retratos editoriales (guiándote paso a paso para
+                            que no tengas que preocuparte por posar), hasta campañas comerciales para marcas. Llevamos
+                            nuestro estándar profesional a donde tu historia lo requiera.
+                        </p>
+                    </div>
+
+                    <!-- Métricas -->
+                    <div class="grid grid-cols-2 gap-8 pt-8 border-t border-brand-100">
+                        <div>
+                            <span class="block text-3xl sm:text-4xl font-serif text-brand-900 font-bold">10+</span>
+                            <span class="text-xs text-brand-500 tracking-widest uppercase mt-2 block">Años de
+                                Trayectoria</span>
                         </div>
-                        <div class="w-px h-12 bg-brand-200"></div>
-                        <div class="text-center">
-                            <span class="block text-3xl font-serif font-bold text-brand-900">500+</span>
-                            <span class="text-xs text-brand-500 uppercase tracking-wide">Sesiones</span>
+                        <div>
+                            <span class="block text-3xl sm:text-4xl font-serif text-brand-900 font-bold">300+</span>
+                            <span class="text-xs text-brand-500 tracking-wider uppercase mt-2 block">Sesiones
+                                Exitosas</span>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
@@ -250,121 +293,141 @@
                     <!-- 1 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/rosas.jpg" alt="Retrato Artístico" class="w-full h-full object-cover">
+                        <img src="assets/brand/rosas.jpg"
+                            alt="Sesión de retrato editorial y fotografía de moda en Piedecuesta"
+                            class="w-full h-full object-cover">
                     </div>
                     <!-- 2 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_0931B&N.jpg" alt="Eventos" loading="lazy"
+                        <img src="assets/brand/IMG_0931B&N.jpg"
+                            alt="Cobertura fotográfica profesional para eventos y 15 años" loading="lazy"
                             class="w-full h-full object-cover">
                     </div>
                     <!-- 3 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_babyB&N.jpg" alt="Estudio Bebés" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_babyB&N.jpg" alt="Estudio Bebés"
+                            alt="Estudio fotográfico en Piedecuesta para recién nacidos y seguimiento de bebés mes a mes"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 4 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_8831.jpg" alt="Maternidad" loading="lazy"
+                        <img src="assets/brand/IMG_8831.jpg"
+                            alt="Sesión de fotografía artística de maternidad y embarazo en Santander" loading="lazy"
                             class="w-full h-full object-cover">
                     </div>
                     <!-- 5 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2331.JPEG" alt="Productos Coctelería" loading="lazy"
+                        <img src="assets/brand/IMG_2331.JPEG" alt="Productos Coctelería"
+                            alt="Fotografía comercial y gastronómica para menús y marcas en Bucaramanga" loading="lazy"
                             class="w-full h-full object-cover">
                     </div>
                     <!-- 6 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2068.jpg" alt="Bebés Mes a Mes" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_2068.jpg"
+                            alt="Estudio fotográfico para recién nacidos y seguimiento de bebés mes a mes"
+                            alt="Bebés Mes a Mes" loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 7 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_1118B&N.jpg" alt="Familia B&N" loading="lazy"
+                        <img src="assets/brand/IMG_1118B&N.jpg"
+                            alt="Fotografía documental en blanco y negro de Familia en Santander" loading="lazy"
                             class="w-full h-full object-cover">
                     </div>
                     <!-- 8 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_1000-2.jpg" alt="Mes a Mes" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_1000-2.jpg"
+                            alt="Fotografía de bebé de meses para álbum de crecimiento mensual en Santander"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 9 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_7867.jpg" alt="Retrato Editorial" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_7867.jpg"
+                            alt="Fotografía de retrato editorial para portafolio de modelos en el Área Metropolitana de Bucaramanga"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 10 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_1137.jpg" alt="Maternidad Liz" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_1137.jpg"
+                            alt="Sesión fotográfica de maternidad y embarazo en exteriores naturales de Bucaramanga"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 11 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_1212p.jpg" alt="Sesion ALanna" loading="lazy"
+                        <img src="assets/brand/IMG_1212p.jpg"
+                            alt="Retrato en estudio fotográfico con iluminación profesional" loading="lazy"
                             class="w-full h-full object-cover">
                     </div>
                     <!-- 12 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_5361.jpg" alt="In The Dark" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_5361.jpg" alt="Retrato materno de alta calidad en blanco y negro"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 13 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_9184.jpg" alt="Halloween" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_9184.jpg"
+                            alt="Estudio fotográfico familiar de Halloween para retratos divertidos con disfraces en Piedecuesta"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 14 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_9173.jpg" alt="Halloween" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_9173.jpg"
+                            alt="Cobertura fotográfica profesional para fiestas de disfraces y eventos sociales de Halloween en Bucaramanga"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 15 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_1800.jpg" alt="Boda Andrea & Sebastian" loading="lazy"
+                        <img src="assets/brand/IMG_1800.jpg"
+                            alt="Fotografía documental de bodas de destino en Bucaramanga y Santander" loading="lazy"
                             class="w-full h-full object-cover">
                     </div>
                     <!-- 16 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_92230.jpg" alt="Mes a Mes Emma 5Mes" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_92230.jpg"
+                            alt="Estudio fotográfico para recién nacidos y seguimiento de bebés mes a mes"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 17 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2526-2.jpg" alt="Mis 24" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_2526-2.jpg"
+                            alt="Sesión de fotos creativa y divertida para celebración de cumpleaños de 24 años en estudio de Bucaramanga"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 18 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2080.jpg" alt="Sesion Hermanas" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_2080.jpg"
+                            alt="Estudio fotográfico para grupos y amigas celebrando fiesta de cumpleaños en Bucaramanga"
+                            alt="Sesion Hermanas" loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 19 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2732.jpg" alt="Butterfly" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_2732.jpg"
+                            alt="Retrato artístico conceptual con maquillaje de mariposas por fotógrafo profesional en Piedecuesta"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 20 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/Prueba.jpg" alt="Doble Exposición" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/Prueba.jpg"
+                            alt="Retrato con técnica de doble exposición fotográfica para perfil creativo en Bucaramanga"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 21 -->
                     <div
@@ -375,56 +438,65 @@
                     <!-- 22 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2402.jpg" alt="Mes a Mes Benjamin" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_2402.jpg"
+                            alt="Sesión fotográfica infantil y seguimiento mes a mes para bebés en Santander"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 23 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_6514B&N.jpg" alt="Retrato Materno" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_6514B&N.jpg"
+                            alt="Sesión de fotos de maternidad en pareja para documentar el embarazo en Santander"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 24 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_8577.jpg" alt="15 Años Maria Jose" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_8577.jpg"
+                            alt="Sesión fotográfica en exteriores para quinceañeras y vestido de 15 años en Santander Piedecuestas Eventos"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 25 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_1078.jpg" alt="Maternidad Liz" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_1078.jpg"
+                            alt="Sesión fotográfica de maternidad y embarazo en exteriores naturales de Piedecuesta"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 26 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/_MG_1982.jpg" alt="15 Años" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/_MG_1982.jpg"
+                            alt="Fotografía de bodas al aire libre capturando emociones reales y espontáneas en Santander"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 27 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2272.jpg" alt="Coctelería" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_2272.jpg"
+                            alt="Producción de fotografía de producto y bebidas para campañas publicitarias de marcas en Santander"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 28 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2760.jpg" alt="Sesion Retrato" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_2760.jpg"
+                            alt="Sesión fotográfica de retrato creativo con iluminación de colores para perfil artístico en Bucaramanga"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 29 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/IMG_2003-3.JPEG" alt="Coctel Doble Exposición" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/IMG_2003-3.JPEG"
+                            alt="Retrato con técnica de doble exposición fotográfica para bares en Bucaramanga y piedecuesta"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <!-- 30 -->
                     <div
                         class="swiper-slide w-[280px] md:w-[400px] aspect-square overflow-hidden shadow-2xl relative group cursor-pointer bg-brand-900">
-                        <img src="assets/brand/_MG_2057.jpg" alt="Sesion Maternidad" loading="lazy"
-                            class="w-full h-full object-cover">
+                        <img src="assets/brand/_MG_2057.jpg"
+                            alt="Fotografía de gestación y retrato de maternidad con iluminación profesional en Piedecuesta"
+                            loading="lazy" class="w-full h-full object-cover">
                     </div>
 
                 </div>
@@ -604,30 +676,125 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-brand-900 text-brand-200 py-12 border-t border-brand-800">
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center">
-                <a href="#">
-                    <!-- Filtro para volver blanco el logo -->
-                    <img src="assets/img/el_studio_head.png" alt="El Studio Logo"
-                        class="h-10 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity">
-                </a>
+    <!-- Footer Premium: Halftone Wordmark Component (Dark Navy Edition & Smooth Hover) -->
+    <footer class="relative bg-[#061224] pt-24 overflow-hidden border-t border-[#0a1b35]">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+            
+            <!-- Top Section: Links & CTA -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                
+                <!-- Columna 1: Brand & Llamado a la acción -->
+                <div class="lg:col-span-2">
+                    <span class="text-xs font-mono tracking-[0.2em] text-[#0280b8] uppercase mb-4 block">¿Comenzamos?</span>
+                    <h3 class="text-3xl sm:text-5xl font-serif text-white mb-8 leading-tight">
+                        Listo para crear algo <br><span class="italic text-[#0280b8] font-normal">memorable.</span>
+                    </h3>
+                    <a href="#contacto" class="inline-flex items-center gap-3 text-sm font-bold text-white bg-[#0280b8] hover:bg-white hover:text-[#061224] px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(2,128,184,0.3)]">
+                        Reservar una Sesión
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- Columna 2: Navegación -->
+                <div>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6 block">Navegación</span>
+                    <ul class="space-y-4 text-slate-300 font-light text-sm">
+                        <li><a href="#historia" class="hover:text-white transition-colors relative group"><span class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-[#0280b8]">•</span> La Historia</a></li>
+                        <li><a href="#proceso" class="hover:text-white transition-colors relative group"><span class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-[#0280b8]">•</span> El Proceso</a></li>
+                        <li><a href="#portafolio" class="hover:text-white transition-colors relative group"><span class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-[#0280b8]">•</span> Portafolio</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors relative group"><span class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-[#0280b8]">•</span> FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Contacto & Redes (CON ICONOS SVG) -->
+                <div>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6 block">Estudio & Social</span>
+                    <ul class="space-y-4 text-slate-300 font-light text-sm mb-6">
+                        <li>Piedecuesta, Santander</li>
+                        <li>Bucaramanga</li>
+                    </ul>
+                    
+                    <!-- Botones de Redes Sociales -->
+                    <div class="flex items-center gap-4">
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/el.studiofotografia" target="_blank" aria-label="Instagram" class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800/50 border border-slate-700 hover:border-[#0280b8] hover:text-[#0280b8] transition-all duration-300 hover:scale-110 text-slate-300 shadow-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 3h-8C5.79 3 4 4.79 4 7v10c0 2.21 1.79 4 4 4h8c2.21 0 4-1.79 4-4V7c0-2.21-1.79-4-4-4z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 16a4 4 0 100-8 4 4 0 000 8z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.5 6.5h.01"></path>
+                            </svg>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/573166899521" target="_blank" aria-label="WhatsApp" class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800/50 border border-slate-700 hover:border-[#25D366] hover:text-[#25D366] transition-all duration-300 hover:scale-110 text-slate-300 shadow-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l1.65-3.8A9.06 9.06 0 014.5 12C4.5 7.03 8.53 3 13.5 3S22.5 7.03 22.5 12s-4.03 9-9 9c-1.63 0-3.15-.43-4.47-1.18L3 21z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.27 8.32c-.38-.85-1.07-1.12-1.6-.96-.44.13-1.06.66-1.14 1.48-.1 1.05.57 2.45 1.83 3.96 1.49 1.78 3.51 2.8 4.7 2.76 1.34-.04 2.27-.66 2.41-1.39.11-.63-.26-1.09-.9-1.39-1.25-.59-2.31-.22-2.58.11-.27.33-.7.56-1.57-.15-.87-.71-1.78-1.85-2.06-2.22-.28-.37-.06-.71.18-.95.34-.34.34-.73.73-1.25z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="flex space-x-6">
-                <a href="https://www.instagram.com/el.studiofotografia/" class="hover:text-white transition-colors"><i
-                        class="ph ph-instagram-logo text-2xl"></i></a>
-                <a href="https://www.tiktok.com/@el.estudiofotografia?_r=1&_t=ZS-99BiZVNot1s"
-                    class="hover:text-white transition-colors"><i class="ph ph-tiktok-logo text-2xl"></i></a>
-                <a href="https://www.behance.net/edwardcamacho10" class="hover:text-white transition-colors"><i
-                        class="ph ph-behance-logo text-2xl"></i></a>
-            </div>
-            <div class="text-sm opacity-70">
-                &copy; 2026 El Studio. Todos los derechos reservados.
+
+            <!-- Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-slate-500 pb-6 border-b border-slate-800">
+                <p>© 2026 El Studio Fotografía. Todos los derechos reservados.</p>
+                <p>Diseño por <a href="https://github.com/SakCreative" target="_blank" class="font-medium hover:text-white transition-colors">SakCreative</a></p>
             </div>
         </div>
+
+        <!-- CSS Refinado para la transición ultra suave (Cross-fade) -->
+        <style>
+            .halftone-base {
+                font-size: clamp(5rem, 18vw, 22rem); 
+                line-height: 0.8;
+                background-image: radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2.5px);
+                background-size: 8px 8px;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .halftone-blue {
+                background-image: radial-gradient(circle, #0280b8 2px, transparent 2.5px);
+                background-size: 8px 8px;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+
+            /* Efecto de Zoom al contenedor padre */
+            .halftone-container:hover .halftone-base {
+                transform: scale(1.02);
+            }
+        </style>
+
+        <!-- Massive Halftone Wordmark (Cross-fade trick) -->
+        <div class="w-full flex justify-center items-end select-none translate-y-4 sm:translate-y-6 lg:translate-y-10 halftone-container cursor-default">
+            
+            <h2 class="relative halftone-base font-serif font-black tracking-tighter text-center whitespace-nowrap">
+                EL STUDIO
+                
+                <!-- Capa Azul Superpuesta: Está invisible y se revela fluidamente al pasar el mouse -->
+                <span class="absolute inset-0 halftone-blue opacity-0 transition-opacity duration-700 ease-in-out halftone-container-hover:opacity-100" style="pointer-events: none;">
+                    EL STUDIO
+                </span>
+            </h2>
+
+        </div>
+        
     </footer>
+
+    <!-- Script de Tailwind para capturar el hover en la capa azul -->
+    <script>
+        // Pequeño truco para que la capa azul escuche el hover del contenedor
+        const halftoneContainer = document.querySelector('.halftone-container');
+        const halftoneBlue = document.querySelector('.halftone-blue');
+        
+        halftoneContainer.addEventListener('mouseenter', () => halftoneBlue.style.opacity = '1');
+        halftoneContainer.addEventListener('mouseleave', () => halftoneBlue.style.opacity = '0');
+    </script>
 
     <!-- Lightbox (Visor de fotos a pantalla completa) -->
     <div id="lightbox"
