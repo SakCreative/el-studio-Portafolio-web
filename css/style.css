@@ -104,3 +104,44 @@
     display: flex !important;
     opacity: 1 !important;
 }
+
+/* --- COMPONENT: Icon SVG Hover Glow --- */
+
+/* Sutil cambio de fondo de la bolita gris a un tono levísimamente azul cielo */
+.feature-row.group:hover .icon-box {
+    background-color: #f0f9ff; 
+    border-color: #e0f2fe;
+}
+
+/* El resplandor Neón aplicado EXCLUSIVAMENTE a las líneas del icono */
+.feature-row.group:hover svg {
+    color: #0280b8; /* Cambia el trazo a tu azul */
+    /* Crea un resplandor luminoso alrededor de la forma del icono */
+    filter: drop-shadow(0 0 4px rgba(2, 128, 184, 0.5)) drop-shadow(0 0 8px rgba(56, 189, 248, 0.4));
+}
+/* --- COMPONENT: Halftone Footer Wordmark --- */
+
+.halftone-base {
+    font-size: clamp(5rem, 18vw, 22rem);
+    line-height: 0.8;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 2px, transparent 2.5px);
+    background-size: 8px 8px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.halftone-blue {
+    background-image: radial-gradient(circle, #0280b8 2px, transparent 2.5px);
+    background-size: 8px 8px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Efecto de Zoom al contenedor padre */
+.halftone-container:hover .halftone-base {
+    transform: scale(1.02);
+}
+

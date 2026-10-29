@@ -147,3 +147,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+/* --- MODULE: Halftone Footer Hover Effect --- */
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Seleccionamos los elementos del DOM
+    const halftoneContainer = document.querySelector('.halftone-container');
+    const halftoneBlue = document.querySelector('.halftone-blue');
+
+    // Validación de seguridad para evitar errores si los elementos no existen
+    if (halftoneContainer && halftoneBlue) {
+        halftoneContainer.addEventListener('mouseenter', () => {
+            halftoneBlue.style.opacity = '1';
+        });
+        
+        halftoneContainer.addEventListener('mouseleave', () => {
+            halftoneBlue.style.opacity = '0';
+        });
+    }
+});
+
+/* --- MODULE: Interactive Features (Neon Toggle) --- */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const features = document.querySelectorAll('.interactive-feature');
+    
+    if (features.length > 0) {
+        features.forEach(feature => {
+            feature.addEventListener('click', function() {
+                // Alternar estado de apagado si ya está encendido
+                if (this.classList.contains('neon-active')) {
+                    this.classList.remove('neon-active');
+                    return;
+                }
+                
+                // Apagar todos los íconos previamente encendidos (comportamiento tipo Radio Button)
+                features.forEach(f => f.classList.remove('neon-active'));
+                
+                // Encender el ícono seleccionado
+                this.classList.add('neon-active');
+            });
+        });
+    }
+});
+
